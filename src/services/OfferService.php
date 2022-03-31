@@ -75,6 +75,7 @@ class OfferService
      * @param $basket
      * @return float|int
      */
+    //TODO Need more time and coding
     private function handleOffer2($product, $basket) {
         $offer = new Offer2();
         $offer = $offer->getOffer($product->id);
@@ -95,6 +96,12 @@ class OfferService
             return $offer->price_second_quantity;
         }
 
+        //TODO Need more time and coding for other conditions
+        return 0;
+    }
+
+    //TODO Need more time and coding
+    private function handleOffer3($product, $basket) {
         //TODO Need more time and coding for other conditions
         return 0;
     }

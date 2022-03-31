@@ -8,6 +8,7 @@ namespace SuperMarket\models;
  * Class Offer2
  * @package SuperMarket\models
  */
+//We might rename this class to KingOffer or other better name
 class Offer2
 {
     //In real application, the following data will be in database

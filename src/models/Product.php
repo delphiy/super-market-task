@@ -2,9 +2,16 @@
 
 namespace SuperMarket\models;
 
+/**
+ * Class Product
+ * @package SuperMarket\models
+ */
 class Product
 {
     //In real application, the following data will be in database
+    /**
+     * @var array[]
+     */
     private $products = [
         [
             'id' => 1,
@@ -38,10 +45,17 @@ class Product
         ]
     ];
 
+    /**
+     * Product constructor.
+     */
     public function __construct()
     {
     }
 
+    /**
+     * @param $id
+     * @return object|null
+     */
     public function getProduct($id)
     {
         $i = array_search($id, array_column($this->products, 'id'));

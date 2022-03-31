@@ -6,11 +6,19 @@ use SuperMarket\models\Offer;
 use SuperMarket\models\Offer2;
 use SuperMarket\models\Product;
 
+/**
+ * Class OfferService
+ * @package SuperMarket\services
+ */
 class OfferService
 {
     public function __construct() {
     }
 
+    /**
+     * @param $baskets
+     * @return float|int
+     */
     public function total($baskets) {
         //In laravel framework, we will access to model directly because it facade
         $product = new Product();
@@ -33,6 +41,11 @@ class OfferService
         return $total;
     }
 
+    /**
+     * @param $product
+     * @param $basket
+     * @return float|int
+     */
     private function handleOffer1($product, $basket) {
         $offer = new Offer();
         $offer = $offer->getOffer($product->id);
@@ -57,6 +70,11 @@ class OfferService
         return $sum;
     }
 
+    /**
+     * @param $product
+     * @param $basket
+     * @return float|int
+     */
     private function handleOffer2($product, $basket) {
         $offer = new Offer2();
         $offer = $offer->getOffer($product->id);

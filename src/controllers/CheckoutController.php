@@ -4,10 +4,6 @@ class CheckoutController
 {
     public function index()
     {
-        return "Hello World";
-    }
-
-    public function printHelloWorld() {
-        return "Hello World";
+        return "view";
     }
 }

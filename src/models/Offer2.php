@@ -3,9 +3,17 @@
 namespace SuperMarket\models;
 
 //We might give this better offer name instead of offer, for example KingOffer
+
+/**
+ * Class Offer2
+ * @package SuperMarket\models
+ */
 class Offer2
 {
     //In real application, the following data will be in database
+    /**
+     * @var \int[][]
+     */
     private $offers = [
         [
             'id' => 1,
@@ -21,6 +29,10 @@ class Offer2
     {
     }
 
+    /**
+     * @param $productID
+     * @return object|null
+     */
     public function getOffer($productID)
     {
         $i = array_search($productID, array_column($this->offers, 'product_id'));

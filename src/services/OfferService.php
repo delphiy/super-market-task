@@ -95,7 +95,7 @@ class OfferService
             return $offer->price_second_quantity;
         }
 
-
+        //TODO Need more time and coding for other conditions
         return 0;
     }
 
